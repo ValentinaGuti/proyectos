@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tus Citas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">hola, {{user.first_name}}</a>
+    <button class="btn btn-danger ml-auto" type="button">Cerrar Sesión</button>
+</nav>
+
+<div class="container mt-4">
+
+    <!-- Tabla de Citas Actuales -->
+    <h2>Aquí están tus citas</h2> 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Cita</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.task }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.status }}</td>
+            <td>
+                <button class="btn btn-danger">Eliminar</button>
+                <button class="btn btn-primary">Editar</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+    <!-- Botón para agregar citas -->
+    <button class="btn btn-success"> <a href="/agregar">Agregar Cita</a></button>
+
+    <!-- Tabla de Citas Pasadas -->
+    <h2>Citas Pasadas</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cita</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cita Pasada 1</td>
+                <td>Fecha Pasada 1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Tarea</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Nombre de Usuario</a>
+    <a class="btn btn-danger" href="inicio.html">Volver al Inicio</a>
+    <a class="btn btn-danger" href="#">Cerrar Sesión</a>
+</nav>
+
+<div class="container mt-4">
+
+    <!-- Formulario de edición de tarea -->
+    <h2>Editar Tarea</h2>
+    <form>
+        <div class="form-group">
+            <label for="nombreTarea">Nombre de la Tarea</label>
+            <input type="text" class="form-control" id="nombreTarea" value="Nombre de la Tarea Actual">
+        </div>
+        <div class="form-group">
+            <label for="fechaTarea">Fecha de la Tarea</label>
+            <input type="date" class="form-control" id="fechaTarea" value="Fecha de la Tarea Actual">
+        </div>
+        <div class="form-group">
+            <label for="estadoTarea">Estado de la Tarea</label>
+            <select class="form-control" id="estadoTarea">
+                <option>Por hacer</option>
+                <option>En progreso</option>
+                <option>Completada</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a class="btn btn-secondary" href="inicio.html">Cancelar</a>
+    </form>
+
+</div>
+
+<!-- Scripts de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
